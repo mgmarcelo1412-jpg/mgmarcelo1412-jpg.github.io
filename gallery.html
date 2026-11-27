@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | Michael Gabriel Marcelo</title>
+<meta name="description" content="Photo gallery of Michael Gabriel Marcelo: Abu Dhabi, Dubai and Fujairah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1320; --surface:#171c2e; --line:#283049;
+  --text:#e9ecf6; --muted:#98a0b8; --accent:#8fa4ff;
+  --sans:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+nav strong{font-weight:700;letter-spacing:-.01em}
+nav ul{display:flex;gap:24px;list-style:none;padding:0}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;padding:72px 0 96px}
+h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.04;letter-spacing:-.035em;font-weight:700}
+h1 span{color:var(--muted);font-weight:500}
+.lead{margin:24px 0 32px;color:var(--muted);max-width:46ch}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:500;border:1px solid var(--line);transition:background .2s,border-color .2s}
+.btn.primary{background:var(--accent);color:#0f1320;border-color:var(--accent)}
+.btn.primary:hover{background:#a9b9ff}
+.btn:not(.primary):hover{border-color:var(--accent)}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;font:400 .9rem/1.7 var(--mono)}
+.term header{display:flex;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);color:var(--muted)}
+.term header i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.term header em{margin-left:auto;font-style:normal;font-size:.8rem}
+.term pre{padding:20px;white-space:pre-wrap;overflow-x:auto}
+.k{color:var(--accent)}.s{color:#c7d0ff}.c{color:var(--muted)}
+.cur{display:inline-block;width:8px;height:1em;background:var(--accent);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:1.9rem;letter-spacing:-.025em;margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p+p{margin-top:16px}
+.about p{color:var(--muted);max-width:60ch}
+.proj{list-style:none;padding:0}
+.proj li{display:grid;grid-template-columns:200px 1fr auto;gap:24px;padding:26px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.proj li:first-child{padding-top:0}
+.proj h3{font-size:1.2rem;font-weight:500}
+.proj p{color:var(--muted)}
+.exp ul{padding-left:18px;color:var(--muted)}
+.exp li li{padding:0;border:0;display:list-item;margin:0 0 6px}
+.tag{font:400 .8rem var(--mono);color:var(--accent);white-space:nowrap}
+.skills{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}
+.skills li{padding:8px 16px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.skills li.now{border-color:var(--accent);color:var(--text)}
+.note{margin-top:18px;color:var(--muted);font-size:.95rem}
+.contact p{color:var(--muted);margin-bottom:24px;max-width:50ch}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.tabs button{font:inherit;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:8px 18px;cursor:pointer;transition:color .2s,border-color .2s}
+.tabs button:hover{color:var(--text)}
+.tabs button[aria-pressed="true"]{color:var(--text);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.tile{padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);cursor:zoom-in;aspect-ratio:4/3}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.tile:hover img{transform:scale(1.04)}
+.tile[hidden]{display:none}
+#empty{color:var(--muted)}
+dialog{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:12px;max-width:min(92vw,1100px);margin:auto}
+dialog img{max-width:100%;max-height:78vh;display:block;border-radius:8px}
+dialog p{margin:10px 4px 2px;color:var(--muted)}
+dialog form{text-align:right}
+dialog button{font:inherit;color:var(--text);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer;margin-bottom:10px}
+dialog::backdrop{background:rgba(5,8,16,.82)}
+@media(max-width:800px){
+  .hero,.about{grid-template-columns:1fr;gap:36px}
+  .hero{padding:40px 0 64px}
+  .proj li{grid-template-columns:1fr;gap:6px}
+  nav ul{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cur{animation:none}}
+.page-head{padding:40px 0 8px}
+.page-head a{color:var(--muted);text-decoration:none}
+.page-head a:hover{color:var(--text)}
+.page-head h1{margin-top:20px}
+.page-head p{margin-top:12px;color:var(--muted)}
+#gallery{border-top:0;padding-top:32px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <strong><a href="index.html" style="text-decoration:none">Michael Gabriel Marcelo</a></strong>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="gallery.html" aria-current="page" style="color:var(--text)">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <header class="page-head">
+      <a href="index.html">← Back to portfolio</a>
+      <h1>Gallery</h1>
+      <p>Photos from Abu Dhabi, Dubai and Fujairah.</p>
+    </header>
+    <section id="gallery">
+      <div class="tabs" id="tabs" role="group" aria-label="Filter photos by place">
+        <button type="button" data-c="all" aria-pressed="true">All</button>
+        <button type="button" data-c="Abu Dhabi" aria-pressed="false">Abu Dhabi</button>
+        <button type="button" data-c="Dubai" aria-pressed="false">Dubai</button>
+        <button type="button" data-c="Fujairah" aria-pressed="false">Fujairah</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p id="empty" hidden>Photos coming soon.</p>
+    </section>
+  </main>
+  <footer>© 2026 Michael Gabriel Marcelo</footer>
+</div>
+<dialog id="lb" aria-label="Photo viewer">
+  <form method="dialog"><button>Close</button></form>
+  <img id="lbimg" alt="">
+  <p id="lbcap"></p>
+</dialog>
+<script>
+// To add a photo: upload it to the images folder, then add a line here.
+var PHOTOS=[
+  {c:"Abu Dhabi",f:"abu-dhabi-1.jpg",t:"Abu Dhabi"},
+  {c:"Abu Dhabi",f:"abu-dhabi-2.jpg",t:"Abu Dhabi"},
+  {c:"Abu Dhabi",f:"abu-dhabi-3.jpg",t:"Abu Dhabi"},
+  {c:"Dubai",f:"dubai-1.jpg",t:"Dubai"},
+  {c:"Dubai",f:"dubai-2.jpg",t:"Dubai"},
+  {c:"Dubai",f:"dubai-3.jpg",t:"Dubai"},
+  {c:"Fujairah",f:"fujairah-1.jpg",t:"Fujairah"},
+  {c:"Fujairah",f:"fujairah-2.jpg",t:"Fujairah"},
+  {c:"Fujairah",f:"fujairah-3.jpg",t:"Fujairah"}
+];
+var grid=document.getElementById("grid"),tabs=document.getElementById("tabs"),
+    empty=document.getElementById("empty"),lb=document.getElementById("lb"),cur="all";
+function refresh(){
+  var tiles=grid.querySelectorAll(".tile"),n={};
+  tiles.forEach(function(t){n[t.dataset.c]=(n[t.dataset.c]||0)+1;t.hidden=!(cur==="all"||t.dataset.c===cur)});
+  tabs.querySelectorAll("button").forEach(function(b){
+    b.hidden=b.dataset.c!=="all"&&!n[b.dataset.c];
+    b.setAttribute("aria-pressed",b.dataset.c===cur)});
+  empty.hidden=tiles.length>0;
+  tabs.hidden=tiles.length===0;
+}
+PHOTOS.forEach(function(p){
+  var b=document.createElement("button"),i=new Image();
+  b.type="button";b.className="tile";b.dataset.c=p.c;b.setAttribute("aria-label","View photo: "+p.t);
+  i.alt=p.t;i.loading="lazy";
+  i.onerror=function(){b.remove();refresh()};
+  i.src="images/"+p.f;
+  b.append(i);
+  b.onclick=function(){document.getElementById("lbimg").src=i.src;document.getElementById("lbimg").alt=p.t;
+    document.getElementById("lbcap").textContent=p.t;lb.showModal()};
+  grid.append(b);
+});
+tabs.onclick=function(e){var b=e.target.closest("button");if(b){cur=b.dataset.c;refresh()}};
+lb.onclick=function(e){if(e.target===lb)lb.close()};
+refresh();
+</script>
+</body>
+</html>
