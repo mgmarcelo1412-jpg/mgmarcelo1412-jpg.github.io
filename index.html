@@ -21,9 +21,9 @@ body{background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 var(--sans);
 a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;padding:24px 0}
 nav strong{font-weight:700;letter-spacing:-.01em}
-nav ul{display:flex;gap:24px;list-style:none;padding:0}
+nav ul{display:flex;flex-wrap:wrap;gap:8px 24px;list-style:none;padding:0}
 nav a{text-decoration:none;color:var(--muted);transition:color .2s}
 nav a:hover{color:var(--text)}
 .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;padding:72px 0 96px}
@@ -92,6 +92,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
         <p class="lead">Based in Abu Dhabi. I coordinate travel and client operations, and I’m learning Python, SQL and AI tools step by step.</p>
         <div class="btns">
           <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="gallery.html">View gallery</a>
           <a class="btn" href="#contact">Get in touch</a>
         </div>
       </div>
@@ -158,6 +159,12 @@ Hello, Michael Gabriel Marcelo<span class="cur" aria-hidden="true"></span></pre>
           <span class="tag">HTML · CSS</span>
         </li>
       </ul>
+    </section>
+
+    <section id="gallery" class="contact">
+      <h2>Gallery</h2>
+      <p>Photos from across the seven emirates of the UAE.</p>
+      <a class="btn primary" href="gallery.html">Open the gallery</a>
     </section>
 
     <section id="skills">
