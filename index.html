@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Name | Portfolio</title>
-<meta name="description" content="Personal portfolio of Your Name: learning data and AI, building in public.">
+<title>Michael Gabriel Marcelo | Portfolio</title>
+<meta name="description" content="Personal portfolio of Michael Gabriel Marcelo: learning data and AI, building in public.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -53,6 +53,8 @@ h2{font-size:1.9rem;letter-spacing:-.025em;margin-bottom:28px}
 .proj li:first-child{padding-top:0}
 .proj h3{font-size:1.2rem;font-weight:500}
 .proj p{color:var(--muted)}
+.exp ul{padding-left:18px;color:var(--muted)}
+.exp li li{padding:0;border:0;display:list-item;margin:0 0 6px}
 .tag{font:400 .8rem var(--mono);color:var(--accent);white-space:nowrap}
 .skills{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0}
 .skills li{padding:8px 16px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
@@ -72,9 +74,10 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
 <body>
 <div class="wrap">
   <nav aria-label="Main">
-    <strong>Your Name</strong>
+    <strong>Michael Gabriel Marcelo</strong>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -84,8 +87,8 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
   <main>
     <div class="hero">
       <div>
-        <h1>Hi, I’m Your Name. <span>I’m learning to build with data and AI.</span></h1>
-        <p class="lead">I’m working through Python, SQL and AI tools step by step, and I share what I build along the way.</p>
+        <h1>Hi, I’m Michael Gabriel Marcelo. <span>Operations professional with an IT background, now learning data and AI.</span></h1>
+        <p class="lead">Based in Abu Dhabi. I coordinate travel and client operations, and I’m learning Python, SQL and AI tools step by step.</p>
         <div class="btns">
           <a class="btn primary" href="#projects">See my projects</a>
           <a class="btn" href="#contact">Get in touch</a>
@@ -93,20 +96,51 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
       </div>
       <div class="term" aria-label="Python code example">
         <header><i></i><i></i><i></i><em>hello.py</em></header>
-<pre><span class="k">name</span> = <span class="s">"Your Name"</span>
+<pre><span class="k">name</span> = <span class="s">"Michael Gabriel Marcelo"</span>
 <span class="k">print</span>(<span class="s">"Hello,"</span>, name)
 
 <span class="c"># output</span>
-Hello, Your Name<span class="cur" aria-hidden="true"></span></pre>
+Hello, Michael Gabriel Marcelo<span class="cur" aria-hidden="true"></span></pre>
       </div>
     </div>
 
     <section id="about" class="about">
       <h2>About me</h2>
       <div>
-        <p>Write two or three sentences here: where you’re based, what you do now, and what you want to do next.</p>
-        <p>Add one thing that makes you different, such as a past job, a hobby, or a skill from another field.</p>
+        <p>I’m a Filipino operations professional based in Abu Dhabi, UAE, with experience in travel coordination, client relations, administrative support and IT services.</p>
+        <p>I hold a Bachelor of Science in Information Technology and I’m building new skills in data and AI. I speak Filipino and English.</p>
       </div>
+    </section>
+
+    <section id="experience" class="exp">
+      <h2>Experience</h2>
+      <ul class="proj">
+        <li>
+          <h3>Operation Officer</h3>
+          <ul>
+            <li>Managed bookings, itineraries and travel documents for clients.</li>
+            <li>Coordinated with vendors and suppliers for flights, hotels and tours.</li>
+            <li>Helped clients with inquiries and last-minute travel changes.</li>
+            <li>Tracked payments, deposits and refunds, keeping accurate records.</li>
+            <li>Worked with marketing, sales and customer service teams to streamline operations.</li>
+          </ul>
+          <span class="tag">Abu Dhabi, UAE<br>May 2025 – Jul 2026</span>
+        </li>
+        <li>
+          <h3>Configuration and Maintenance Specialist</h3>
+          <ul>
+            <li>Installed, configured and maintained CCTV systems.</li>
+            <li>Tested and troubleshot systems to keep them reliable.</li>
+            <li>Helped with hardware setup, wiring and system integration.</li>
+          </ul>
+          <span class="tag">Vinculum Technologies Corporation<br>Philippines, 2023</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>Bachelor of Science in Information Technology<br><span style="color:var(--muted)">San Beda College Alabang, Philippines · Graduated 2024</span></p>
     </section>
 
     <section id="projects">
@@ -122,11 +156,6 @@ Hello, Your Name<span class="cur" aria-hidden="true"></span></pre>
           <p>A portfolio built with HTML and CSS, hosted free on GitHub Pages.</p>
           <span class="tag">HTML · CSS</span>
         </li>
-        <li>
-          <h3>Your next project</h3>
-          <p>Replace this with something you build. Describe the problem and what you made.</p>
-          <span class="tag">Coming soon</span>
-        </li>
       </ul>
     </section>
 
@@ -136,9 +165,17 @@ Hello, Your Name<span class="cur" aria-hidden="true"></span></pre>
         <li class="now">Python (learning)</li>
         <li class="now">SQL (learning)</li>
         <li class="now">Claude and AI tools</li>
+        <li>Operations coordination</li>
+        <li>Travel booking and reservations</li>
+        <li>Client relations</li>
+        <li>IT support and troubleshooting</li>
+        <li>Network and remote desktop support</li>
+        <li>Data management and reporting</li>
+        <li>CRM tools</li>
+        <li>Microsoft Office</li>
+        <li>Canva and Meta Business Suite</li>
+        <li>Google Analytics</li>
         <li>GitHub</li>
-        <li>HTML and CSS</li>
-        <li>Prompt writing</li>
       </ul>
       <p class="note">Highlighted skills are the ones I’m working on right now.</p>
     </section>
@@ -147,14 +184,13 @@ Hello, Your Name<span class="cur" aria-hidden="true"></span></pre>
       <h2>Contact</h2>
       <p>Want to work together or just say hello? Send me a message.</p>
       <div class="btns">
-        <a class="btn primary" href="mailto:you@example.com">Email me</a>
-        <a class="btn" href="https://github.com/yourusername">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/yourname">LinkedIn</a>
+        <a class="btn primary" href="mailto:mgdmarcelo@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/mgmarcelo1412-jpg">GitHub</a>
       </div>
     </section>
   </main>
 
-  <footer>© 2026 Your Name</footer>
+  <footer>© 2026 Michael Gabriel Marcelo</footer>
 </div>
 </body>
 </html>
